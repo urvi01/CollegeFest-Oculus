@@ -1,0 +1,456 @@
+@media screen and (min-width:1000px){
+/* for main center text */
+svg {
+    position:fixed;
+    font: 5em 'Montserrat';
+    width: 100%;
+	margin: 0 auto;
+	margin-top:18%;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+#messenger1 {
+	position: fixed;
+	top: 25%;
+	left: 60%;
+	transform: translate(-50%, -50%) rotate(-30deg); 
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+/* animation: turn 4s ease-in-out ; */
+  }
+@keyframes turn{
+	0%{
+		transform: rotate(-30deg);
+	}
+	100%{
+		transform:rotate(-50deg);
+	}
+}
+
+  #messenger2 {
+	position: fixed;
+	top: 30%;
+	left: 35%;
+	transform: translate(-50%, -50%) rotate(50deg); 
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+  }
+
+  
+  #messenger3 {
+	position: fixed;
+	top: 25%;
+	left: 15%;
+	transform: translate(-50%, -50%) rotate(-30deg);
+	font-family: monospace;
+	font-size: 30px;
+	white-space: nowrap;
+	color: white;
+	text-shadow: 0 2px 2px rgba(#000, 0.9);
+  }
+
+/* for side text related to images */
+
+#oldtext1 {
+    display:flex;
+    position: fixed;
+    color: white;
+    font-size: 6em; 
+    text-shadow: .03em .03em 0 #808080;
+    }
+    #oldtext1:after {
+      content: attr(data-shadow);
+      position: fixed;
+	  /* top: .06em;  */
+	  left: .06em;
+      z-index: -1;
+      text-shadow: none;
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48,20%,90%,1) 45%,
+          hsla(48,20%,90%,1) 55%,
+          transparent 0
+          );
+      background-size: .05em .05em;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+      animation: shad-anim 15s linear infinite;
+	  }
+	  
+
+	  #oldtext2 {
+		display:flex;
+		position: fixed;
+		color: white;
+		font-size: 6em; 
+		text-shadow: .03em .03em 0 #808080;
+		padding-left:20vw;
+		}
+		#oldtext2:after {
+		  content: attr(data-shadow);
+		  position: fixed;
+		  padding-left:20vw;
+		  /* top: .06em;  */
+		  left: .06em;
+		  z-index: -1;
+		  text-shadow: none;
+		  background-image:
+			linear-gradient(
+			  45deg,
+			  transparent 45%,
+			  hsla(48,20%,90%,1) 45%,
+			  hsla(48,20%,90%,1) 55%,
+			  transparent 0
+			  );
+		  background-size: .05em .05em;
+		  -webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		
+		  animation: shad-anim 15s linear infinite;
+		  }
+	 #oldtext3 {
+			display:flex;
+			position: fixed;
+			color: white;
+			font-size: 6em; 
+			text-shadow: .03em .03em 0 #808080;
+			padding-top:20vh;
+		}
+		#oldtext3:after
+		{
+			  content: attr(data-shadow);
+			  position: fixed;
+			  /* padding-top:20vh; */
+			  /* top: .06em; */
+			   left: .06em;
+			  z-index: -1;
+			  text-shadow: none;
+			  background-image:
+				linear-gradient(
+				  45deg,
+				  transparent 45%,
+				  hsla(48,20%,90%,1) 45%,
+				  hsla(48,20%,90%,1) 55%,
+				  transparent 0
+				  );
+			  background-size: .05em .05em;
+			  background-clip: text;
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			
+			  animation: shad-anim 15s linear infinite;
+		}
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+	}
+	
+#intro{
+	display:none;
+	width:100%;
+	height: 100%;
+	align-items: center;
+    justify-content: center;
+    position: fixed;
+    color: white;
+	font-size: 2em; 
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes zoomin
+{
+	0%{
+		font-size:2em;
+	}
+	100%{
+		font-size:6em;
+		display:none;
+	}
+}
+@keyframes zoomin
+{
+	0%{
+		font-size:2em;
+	}
+	100%{
+		font-size:6em;
+		display:none;
+	}
+}
+
+}
+
+@media screen and (max-width:999px){
+	/* for main center text */
+	svg {
+		position:fixed;
+		font: 2.5em 'Montserrat';
+		width: 100%;
+		margin: 0 auto;
+		margin-top:30vh;
+	}
+	
+	.text-copy {
+		fill: none;
+		stroke: white;
+		stroke-dasharray: 6% 29%;
+		stroke-width: 3px;
+		stroke-dashoffset: 0%;
+		animation: stroke-offset 5.5s infinite linear;
+	}
+	
+	.text-copy:nth-child(1){
+		stroke: #4D163D;
+		animation-delay: -1;
+	}
+	
+	.text-copy:nth-child(2){
+		stroke: #840037;
+		animation-delay: -2s;
+	}
+	
+	.text-copy:nth-child(3){
+		stroke: #BD0034;
+		animation-delay: -3s;
+	}
+	
+	.text-copy:nth-child(4){
+		stroke: #BD0034;
+		animation-delay: -4s;
+	}
+	
+	.text-copy:nth-child(5){
+		stroke: #FDB731;
+		animation-delay: -5s;
+	}
+	
+	@keyframes stroke-offset{
+		100% {stroke-dashoffset: -35%;}
+	}
+	
+	#messenger1 {
+		position: fixed;
+		top: 90vh;
+		left: 30vw;
+		transform: translate(-50%, -50%) rotate(-30deg); 
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	/* animation: turn 4s ease-in-out ; */
+	  }
+	@keyframes turn{
+		0%{
+			transform: rotate(-30deg);
+		}
+		100%{
+			transform:rotate(-50deg);
+		}
+	}
+	
+	  #messenger2 {
+		position: fixed;
+		top: 30%;
+		left: 35%;
+		transform: translate(-50%, -50%) rotate(-40deg); 
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	  }
+	
+	  
+	  #messenger3 {
+		position: fixed;
+		top: 65vh;
+		left: 60vw;
+		transform: translate(-50%, -50%) rotate(30deg);
+		font-family: monospace;
+		font-size: 30px;
+		white-space: nowrap;
+		color: white;
+		text-shadow: 0 2px 2px rgba(#000, 0.9);
+	  }
+	
+	/* for side text related to images */
+	
+	#oldtext1 {
+		display:flex;
+		position: fixed;
+		color: white;
+		font-size: 4em; 
+		text-shadow: .03em .03em 0 #808080;
+		}
+		#oldtext1:after {
+		  content: attr(data-shadow);
+		  position: fixed;
+		  /* top: .06em; */
+		   left: .06em;
+		  z-index: -1;
+		  text-shadow: none;
+		  background-image:
+			linear-gradient(
+			  45deg,
+			  transparent 45%,
+			  hsla(48,20%,90%,1) 45%,
+			  hsla(48,20%,90%,1) 55%,
+			  transparent 0
+			  );
+		  background-size: .05em .05em;
+		  -webkit-background-clip: text;
+		  -webkit-text-fill-color: transparent;
+		
+		  animation: shad-anim 15s linear infinite;
+		  }
+		  
+	
+		  #oldtext2 {
+			display:flex;
+			position: fixed;
+			color: white;
+			font-size: 4em; 
+			text-shadow: .03em .03em 0 #808080;
+			padding-left:20vw;
+			}
+			#oldtext2:after {
+			  content: attr(data-shadow);
+			  position: fixed;
+			  padding-left:20vw;
+			  /* top: .06em; */
+			   left: .06em;
+			  z-index: -1;
+			  text-shadow: none;
+			  background-image:
+				linear-gradient(
+				  45deg,
+				  transparent 45%,
+				  hsla(48,20%,90%,1) 45%,
+				  hsla(48,20%,90%,1) 55%,
+				  transparent 0
+				  );
+			  background-size: .05em .05em;
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			
+			  animation: shad-anim 15s linear infinite;
+			  }
+		 #oldtext3 {
+				display:flex;
+				position: fixed;
+				color: white;
+				font-size: 4em; 
+				text-shadow: .03em .03em 0 #808080;
+				padding-top:20vh;
+			}
+			#oldtext3:after
+			{
+				  content: attr(data-shadow);
+				  position: fixed;
+				  /* padding-top:20vh; */
+				  /* top: .06em; */
+				   left: .06em;
+				  z-index: -1;
+				  text-shadow: none;
+				  background-image:
+					linear-gradient(
+					  45deg,
+					  transparent 45%,
+					  hsla(48,20%,90%,1) 45%,
+					  hsla(48,20%,90%,1) 55%,
+					  transparent 0
+					  );
+				  background-size: .05em .05em;
+				  -webkit-background-clip: text;
+				  -webkit-text-fill-color: transparent;
+				
+				  animation: shad-anim 15s linear infinite;
+			}
+	  @keyframes shad-anim {
+		0% {background-position: 0 0}
+		0% {background-position: 100% -100%}
+		}
+		
+	#intro{
+		display:none;
+		width:100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		color: white;
+		font-size: 2em; 
+		animation-fill-mode: forwards;
+	}
+	
+	@-webkit-keyframes zoomin
+	{
+		0%{
+			font-size:2em;
+		}
+		100%{
+			font-size:4em;
+			display:none;
+		}
+	}
+	@keyframes zoomin
+	{
+		0%{
+			font-size:2em;
+		}
+		100%{
+			font-size:4em;
+			display:none;
+		}
+	}
+	
+	}
+
+

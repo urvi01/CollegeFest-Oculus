@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Oculus 2019 | Events Tour</title>
+  <link rel="icon" type="icon" href="../oculus-favicon.png" />
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+  <style>
+    @-ms-viewport {
+      width: device-width;
+    }
+
+    @font-face {
+      font-family: 'fourHandTrial';
+      src: url('fourHand_TRIAL.ttf');
+    }
+  </style>
+  <link rel="stylesheet" href="vendor/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="multiple-scenes ">
+
+  <div id="pano"></div>
+
+  <div id="sceneList">
+    <ul class="scenes">
+
+      <a href="#" class="scene" data-id="0-bhavansgate">
+        <li class="text">Bhavan's Gate</li>
+      </a>
+
+      <a href="#" class="scene" data-id="1-bhavans_walkway">
+        <li class="text">Bhavan's Walkway</li>
+      </a>
+
+      <a href="#" class="scene" data-id="2-walkway">
+        <li class="text">SPIT Walkway</li>
+      </a>
+
+      <a href="#" class="scene" data-id="3-spjain_spce">
+        <li class="text">SPJain SPCE</li>
+      </a>
+
+      <a href="#" class="scene" data-id="4-spjain">
+        <li class="text">SPJain</li>
+      </a>
+
+      <a href="#" class="scene" data-id="5-008_00000">
+        <li class="text">Outside SPIT</li>
+      </a>
+
+      <a href="#" class="scene" data-id="6-007_00000">
+        <li class="text">SPIT</li>
+      </a>
+
+      <a href="#" class="scene" data-id="7-mainentrance">
+        <li class="text">SPIT Entrance</li>
+      </a>
+
+      <a href="#" class="scene" data-id="8-quad">
+        <li class="text">SPIT Quadrangle</li>
+      </a>
+
+      <a href="#" class="scene" data-id="9-bikeparking">
+        <li class="text">SPIT Volleyball Court</li>
+      </a>
+
+      <a href="#" class="scene" data-id="10-volleyballcourt">
+        <li class="text">SPIT Volleyball Court 2</li>
+      </a>
+
+      <a href="#" class="scene" data-id="11-seminar_hall">
+        <li class="text">SPIT Seminar Hall</li>
+      </a>
+
+      <a href="#" class="scene" data-id="12-canteen">
+        <li class="text">SPIT Canteen</li>
+      </a>
+
+      <a href="#" class="scene" data-id="13-007">
+        <li class="text">SPIT 007</li>
+      </a>
+
+      <a href="#" class="scene" data-id="14-105">
+        <li class="text">SPIT 1st floor</li>
+      </a>
+
+      <a href="#" class="scene" data-id="15-12_spit_1st_gymkhana">
+        <li class="text">SPIT Gymkhana</li>
+      </a>
+
+      <a href="#" class="scene" data-id="16-6_liftarea">
+        <li class="text">SPIT 6th floor</li>
+      </a>
+
+      <a href="#" class="scene" data-id="17-6thfloor">
+        <li class="text">SPIT 6th Corridor</li>
+      </a>
+
+      <a href="#" class="scene" data-id="18-404">
+        <li class="text">SPIT 6th Lab</li>
+      </a>
+
+      <a href="#" class="scene" data-id="19-towardslakeside">
+        <li class="text">Towards Lakeside</li>
+      </a>
+
+      <a href="#" class="scene" data-id="20-lakeside">
+        <li class="text">Lakeside</li>
+      </a>
+
+      <a href="#" class="scene" data-id="21-amphi">
+        <li class="text">AmphiTheatre</li>
+      </a>
+
+    </ul>
+  </div>
+
+  <div id="titleBar">
+    <h1 class="sceneName">Click and move the mouse around to see the campus</h1>
+  </div>
+
+  <a href="#" id="autorotateToggle">
+    <img class="icon off" src="img/play.png">
+    <img class="icon on" src="img/pause.png">
+  </a>
+
+  <a href="#" id="fullscreenToggle">
+    <img class="icon off" src="img/fullscreen.png">
+    <img class="icon on" src="img/windowed.png">
+  </a>
+
+  <a href="#" id="sceneListToggle">
+    <img class="icon off" src="img/expand.png">
+    <img class="icon on" src="img/collapse.png">
+  </a>
+
+  <a href="#" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon" src="img/up.png">
+  </a>
+  <a href="#" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon" src="img/down.png">
+  </a>
+  <a href="#" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon" src="img/left.png">
+  </a>
+  <a href="#" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon" src="img/right.png">
+  </a>
+  <a href="#" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon" src="img/plus.png">
+  </a>
+  <a href="#" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon" src="img/minus.png">
+  </a>
+
+  <div class="logo"><a href="../index.html">
+      <img style="width: 12vmin; height: auto; vertical-align: middle" src="./oculus-favicon.png" alt="">
+      <img style="width: 14vmin; height: auto; vertical-align: middle" src="./logotext.png" alt="">
+    </a>
+  </div>
+
+  <div class="partner-logo"><a target="_blank" href="https://liminal.in/#Home">
+      <img style="width: 15vmin; height: auto; vertical-align: middle" src="../images/sponsors/2019/Partner Tag/Liminal_New logo for white BG.png"
+        alt="">
+    </a>
+  </div>
+
+
+  <script src="vendor/es5-shim.js"></script>
+  <script src="vendor/eventShim.js"></script>
+  <script src="vendor/classList.js"></script>
+  <script src="vendor/requestAnimationFrame.js"></script>
+  <script src="vendor/screenfull.min.js"></script>
+  <script src="vendor/bowser.min.js"></script>
+  <script src="vendor/marzipano.js"></script>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>

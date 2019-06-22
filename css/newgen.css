@@ -1,0 +1,49 @@
+@media screen and (min-width:800px){
+#boxforcanvas
+{
+    display:flex;
+    width:100%;
+    height:100%;
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+}
+canvas {
+    display:flex;
+    margin:auto;
+    color:black;
+  }
+}
+
+
+@-webkit-keyframes hello {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@-moz-keyframes hello {
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@keyframes hello { 
+    0%{background-position:0% 81%}
+    50%{background-position:100% 20%}
+    100%{background-position:0% 81%}
+}
+@media screen and (max-width:799px){
+    #boxforcanvas
+    {
+        display:flex;
+        width:100%;
+        height:100%;
+        position:fixed;
+        align-items: center;
+        justify-content: center;
+    }
+    canvas {
+        display:flex;
+        margin:auto;
+        color:black;
+      }
+    }

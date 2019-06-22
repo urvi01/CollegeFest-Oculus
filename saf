@@ -1,0 +1,35 @@
+    <a href="./campus-tour/index.html">
+                        <span class="hiddenmobile">Tour the campus with an immersive augmented reality
+                            experience!</span>
+                        <span class="hiddendesktop">AR Campus Tour : Explore Now!</span></a>
+
+                    @media screen and (min-width: 601px) {
+    .hiddendesktop {
+        display: none;
+    }
+}
+
+
+.campus-tour {
+        position: absolute;
+        width: 30vmin;
+        top: 12vh;
+        right: 2vh;
+        background-color: darkred;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        color: #eaeaea;
+        font-family: fourHandTrial;
+        z-index: 3;
+        font-size: 20px;
+        transition: all 0.5s ease;
+      }
+
+      .campus-tour:hover {
+        /* color: rgb(109, 109, 109); */
+        cursor: pointer;
+        transform: scale(1.1);
+        /* transition: color 0.5s ease,scale 0.5s ease; */
+        transition: all 0.5s ease;
+      }

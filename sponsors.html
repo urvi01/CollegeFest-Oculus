@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" media="screen" href="css/fullpage.min.css"> -->
+  <link rel="stylesheet" media="screen" href="css/styles.min.css" />
+  <link rel="stylesheet" media="screen" href="css/sponsors.css" />
+  <link rel="icon" type="icon" href="oculus-favicon.png" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <title>Oculus 2019 | Oculus Sees All</title>
+  <style>
+    @font-face {
+        font-family: "fourHandTrial";
+        src: url("fourHand_TRIAL.ttf");
+      }
+
+      @font-face {
+        font-family: "segoe ui";
+        src: url("Segoe UI.ttf");
+      }
+
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+</head>
+
+<body>
+  <script>
+    function switchTabs(tabname) {
+      $("ul.tabs li").removeClass("current");
+      $(".sponsor-content").removeClass("current");
+      $("#" + tabname).addClass("current");
+      $("#sponsor-" + tabname).addClass("current");
+    }
+  </script>
+
+  <!-- common navbar elements -->
+
+  <div id="videoOverlay" class="video-overlay">
+    <iframe id="after-movie" width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk"
+      frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="close">
+      <i onclick="hideOverlay()" class="fa fa-close"></i>
+    </div>
+  </div>
+
+  <div id="navbar">
+    <img style="width: 80px;
+        position: absolute;
+        left: 2vw;
+        top: 1.5vh;" src="logotext.png" />
+
+    <div class="swing">
+      <div class="hover" onclick="showOverlay()">
+        <div class="thread"></div>
+        <div class="handle"></div>
+      </div>
+    </div>
+
+    <div id="nav">
+      <div style="color: white"><a href="sponsors.html">Sponsors</a></div>
+      <div style="background-color: inherit; border-radius: 50%;" data-tilt data-tilt-scale="1.3">
+        <a href="index.html"><img src="oculus-favicon.png" /></a>
+      </div>
+      <div><a href="events.final.html">Events</a></div>
+    </div>
+
+    <!-- <div class="register"> Coming Soon!</div> -->
+  </div>
+
+  <div class="icon-bar">
+    <a target="_blank" href="https://facebook.com/OculusSeesAll" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a target="_blank" href="https://mobile.twitter.com/OculusSeesAll" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a target="_blank" href="https://www.instagram.com/oculus2k19/" class="google"><i class="fa fa-instagram"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/company/oculusseesall" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a target="_blank" href="https://www.youtube.com/channel/UCm5gXAKIwUQTuGngoGlM4pg" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <!-- for tab links -->
+    <ul class="tabs">
+      <li class="tab-link current" id="tab1" onclick="switchTabs('tab1')">
+        2019
+      </li>
+      <li class="tab-link" id="tab2" onclick="switchTabs('tab2')">
+        Past Partnerships
+      </li>
+    </ul>
+
+    <!-- TAB 1 -->
+    <div class="sponsor-content current" id="sponsor-tab1">
+      <h1>
+        <span class="brochure"><a class="effect-shine" target="_blank" href="./Oculus_Marketing_Deck.pdf" download><i
+              class="fa fa-download"></i>&nbsp;Sponsorship brochure</a></span>
+        <!-- <span style="left: 0vw;position: relative;">Oculus 2019</span> -->
+      </h1>
+
+
+      <h3>Presented by</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://www.godrejproperties.com/"><img id="sponsorlogo" src="images/sponsors/2019/Title/Godrej/godrej properties.jpeg"
+              alt="Title sponsor" style="height: 15vh" /></a>
+          <p><strong>Title Sponsor</strong></p>
+        </div>
+      </div>
+
+
+      <br>
+      <h3>Powered by</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://nerolac.com/paint-colours/healthy-home-paints.html"><img id="sponsorlogo"
+              src="images/sponsors/2019/Co-Title/Healthy Home Paint Logo-01.jpg" alt="CoTitle sponsor" style="height: 18vh" /></a>
+          <p><strong>Co-title Sponsor</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="www.licindia.in"><img id="sponsorlogo" src="images/sponsors/2019/Co-Title/LIC_LOGO.png"
+              alt="CoTitle sponsor" style="height: 18vh" /></a>
+          <p><strong>Co-title Sponsor</strong></p>
+        </div>
+
+      </div>
+
+      <br><br><br>
+      <h3>In Association with</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <img id="sponsorlogo" src="images/sponsors/2019/Associates/zoot/ZE Black.png" alt="CoTitle sponsor" style="height: 18vh" />
+          <p>Entertainment Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/British Council/image006.jpg"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://liminal.in/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Liminal_New logo for white BG.png"
+              alt="Content Partner" /></a>
+          <p>Virtual Reality Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/vodafone/7391_New_VF_Logo_Stack_Small_RGB_RED_ORIGINAL.png"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/icici lombard/Capture.PNG"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/republic tv/republic.PNG"
+              alt="Associate Partner" /></a>
+          <p>Media Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/mj coaters/mjcoaters.PNG"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/mtvvh1/MTV Beats Colour Final Logo.png"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://ielts.britishcouncil.org/"><img id="sponsorlogo" src="images/sponsors/2019/Associates/mtvvh1/VH1_Logo.png"
+              alt="Associate Partner" /></a>
+          <p>Associate Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.faberspa.com/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Associates/faber/FABER_Logo_payoff_P3435C.jpg"
+              alt="Appliance Partner" /></a>
+          <p>Appliance Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="http://akademia.co.in/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Associates/akademia/Capture.PNG"
+              alt="Appliance Partner" /></a>
+          <p>Knowledge Partner</p>
+        </div>
+      </div>
+
+      <br><br><br>
+      <h3 style="text-align: center">In Partnership with</h3>
+      <div class="sponsors">
+
+        <div class="sponsor-wrapper">
+          <a href="https://atkt.in/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Content Partner/ATKT-mobile.png"
+              alt="Content Partner" /></a>
+          <p>Content Partner</p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Digital Advertising Partner/DASH LOGO CROP.png"
+            alt="Content Partner" />
+          <p>Digital Advertising Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://atkt.in/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Digital Partner/LOGO - OBSKUR JOURNAL WHITE.png"
+              alt="Content Partner" /></a>
+          <p>Digital Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="http://sptbi.spit.ac.in/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Knowledge partner/sptbi.PNG"
+              alt="Content Partner" /></a>
+          <p>Knowledge Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="http://927bigfm.com/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Radio Partners/BigFM/Big Fm 92.7_AW_Colour File_CtC-01.png"
+              alt="Content Partner" /></a>
+
+          <a target="_blank" href="http://www.magicfm.in/"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Radio Partners/MagicFM/MagicFM.jpg"
+              alt="Content Partner" /></a>
+
+          <a target="_blank" href="www.redfmindia.in"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Radio Partners/RedFM/RedFM.png"
+              alt="Content Partner" /></a>
+          <p>Radio Partners</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Silver Screen Partner/bling ping coloured logo.png"
+            alt="Content Partner" />
+          <p>Silver Screen Partner</p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="http://enlightenindia.co.in/">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Magazine Media Partner/ei LOGO 2018.png" alt="Magazine Partner" />
+          </a>
+          <p>Magazine Media Partner</p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a href="https://maharashtratimes.indiatimes.com/" target="_blank"><img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Newspaper Partner/Maharashtra_Tmes.jpg"
+              alt="Newspaper Partner" />
+          </a>
+          <p>Newspaper Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.duexpress.in/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Online Media Partners/DUExpress_logo.png" alt="Media Partner" />
+          </a>
+          <a href="https://www.igniteengineers.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Online Media Partners/Ignite_Engineers_Logo.png"
+              alt="Media Partner" />
+          </a>
+          <p>Online Media Partners</p>
+        </div>
+        <br />
+        <div class="sponsor-wrapper">
+          <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Tittle-Tattle Partner/IMG-20181231-WA0001.jpg"
+            alt="Tittle Tattle Partner" />
+          <p>Tittle Tattle Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="http://noescape.in/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Vouchers/No escape/IMG-20181229-WA0022.jpg" alt="Voucher Partner" />
+          </a>
+          <a href="#" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Vouchers/Radhika_s glitter glow salon/IMG-20190106-WA0031.jpg"
+              alt="Voucher Partner" />
+          </a>
+          <a href="https://paytm.com/movies" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Voucher Partner/Paytm/paytm.PNG" alt="Voucher Partner" />
+          </a>
+          <p>Voucher Partners</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.brijeel.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Water Partner/Brijeel/WaterPartner.png" alt="Water Partner" />
+          </a>
+          <p>Water Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Copy of the knotty treads.png" alt="Gifting/Creative Partner" />
+          </a>
+          <p>Gifting/Creative Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/barcode.jpg" alt="Style Partner" />
+          </a>
+          <p>Style Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://yourghostproducers.com/" target="_blank">
+            <img style="background-color: grey;" id="sponsorlogo" src="images/sponsors/2019/Partner Tag/YGP(White Logo).png"
+              alt="International Music Partner" />
+          </a>
+          <p>International Music Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="http://kiranroysguitarstudio.com/" target="_blank">
+            <img style="background-color: black;" id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Guitar Studio white.png"
+              alt="Music Partner" />
+          </a>
+          <p>Music Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/lion.jpeg" alt="Camping Partner" />
+          </a>
+          <p>Camping Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.richarddcosta.com" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/RADA LOGO_PNG.png" alt="Dance Partner" />
+          </a>
+          <p>Dance Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Waffle partner/IMG-20190115-WA0001.jpg" alt="Dance Partner" />
+          </a>
+          <p>Waffle Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://in.linkedin.com/company/quidich" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Drone Partner/13782193_511038695762502_7841604035806555814_n.jpg"
+              alt="Dance Partner" />
+          </a>
+          <p>Drone Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a>
+            <img id="sponsorlogo" src="images/sponsors/2019/Partner Tag/Advertising Partner/Tribes/tribe.PNG" alt="Dance Partner" />
+          </a>
+          <p>Advertising Partner</p>
+        </div>
+
+      </div>
+
+      <br><br><br>
+      <h3>Events Sponsors</h3>
+      <h3 style="text-align: center">Hackathon</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="https://www.lntinfotech.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/images.png" alt="LTI" />
+          </a>
+          <p><strong>LTI</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.xinfin.org/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/sponsor-logo-1.png" alt="XinFin" />
+          </a>
+          <p><strong>XinFin</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="www.workindia.in/‎" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/sponsor-logo-2.png" alt="WorkIndia" />
+          </a>
+          <p><strong>WorkIndia</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://hasura.io/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/sponsor-logo-3.png" alt="Hasura" />
+          </a>
+          <p><strong>Hasura</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.jetbrains.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/sponsor-logo-4.png" alt="JetBrains" />
+          </a>
+          <p><strong>JetBrains</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://hacksociety.tech/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Hackathon/sponsor-logo-5.png" alt="HackSociety" />
+          </a>
+          <p><strong>HackSociety</strong></p>
+        </div>
+      </div>
+
+
+      <h3 style="text-align: center">Sargam</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="viilbery.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Sargam/vilberry.jpg" alt="Sargam" />
+          </a>
+          <p><strong>Vilberry</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.onlinesbi.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Sargam/2017-Design-Stack-new-logo-design-State-Bank-of-India.png"
+              alt="Sargam" />
+          </a>
+          <p><strong>SBI</strong></p>
+        </div>
+      </div>
+
+
+      <h3 style="text-align: center">Techrace</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="http://www.kossine.com/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Techrace/Kossine Logo.png" alt="Sargam" />
+          </a>
+          <p><strong>Kossine</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.sdcorp.in/" target="_blank">
+            <img id="sponsorlogo" src="images/sponsors/2019/Events/Techrace/SD Corp -Logo.png" alt="Sargam" />
+          </a>
+          <p><strong>SD Corp</strong></p>
+        </div>
+      </div>
+
+      <h3 style="text-align: center">Aelan-e-Jung</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img src="./images/sponsors/2019/Events/AEJ/PicsArt_12-27-05.18.12.jpg" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Koverify</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.kokanbank.net/" target="_blank">
+            <img src="./images/sponsors/2019/Events/AEJ/banner.jpg" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Kokan Bank</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://catking.in/" target="_blank">
+            <img src="./images/sponsors/2019/Events/AEJ/catking.PNG" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>CAT King</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a href="https://www.huberandholly.com/" target="_blank">
+            <img src="./images/sponsors/2019/Events/AEJ/hubernholly.PNG" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Huber & Holly</strong></p>
+        </div>
+
+
+        <div class="sponsor-wrapper">
+          <a href="" target="_blank">
+            <img src="./images/sponsors/2019/Events/AEJ/online1.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>ATC Holidays</strong></p>
+        </div>
+      </div>
+
+      <h3 style="text-align: center">Codatron</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="https://studysid.com/" target="_blank">
+
+            <img src="./images/sponsors/2019/Events/Codatron/IMG-20190117-WA0007.jpg" alt="" id="sponsorlogo">
+            <p><strong>Studysid</strong></p>
+        </div>
+
+      </div>
+
+      <h3 style="text-align: center">Fun Fiesta</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="http://www.rset.edu.in/rmcc/">
+            <img src="./images/sponsors/2019/Events/Fun Fiesta/0 Logo#-01.jpg" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Ramdhar Maheshwari </strong></p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="http://www.rset.edu.in/rmcc/">
+            <img src="./images/sponsors/2019/Events/Fun Fiesta/SkinzyLogo.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Skinzy</strong></p>
+        </div>
+
+      </div>
+
+      <h3 style="text-align: center">MUN</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://zebronics.com/">
+            <img src="./images/sponsors/2019/Events/MUN/Zebronics.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Zebronics</strong></p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a href="">
+            <img src="./images/sponsors/2019/Events/MUN/PHOTO-2019-01-03-17-45-03.jpg" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>United Telecom</strong></p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://www.freepressjournal.in/">
+            <img src="./images/sponsors/2019/Events/MUN/images.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>The Free Press Journal</strong></p>
+        </div>
+
+      </div>
+
+      <h3 style="text-align: center">Vistual Stock Market</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://www.360degreeadventure.com/">
+            <img style="background-color: #bc7eff" src="./images/sponsors/2019/Events/VSM/360 LOGO.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>360 Degree Adventure Camping</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="http://www.ctrls.in/">
+            <img style="background-color: #8ce69f" src="./images/sponsors/2019/Events/VSM/CTRLS.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>CtrlS</strong></p>
+        </div>
+
+        <div class="sponsor-wrapper">
+          <a target="_blank" href="https://business.google.com/website/navjivan-book-centre">
+            <img style="background-color: #828282" src="./images/sponsors/2019/Events/VSM/NAVJIVAN.png" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>Navjivan Book Centre</strong></p>
+        </div>
+
+      </div>
+
+      <h3 style="text-align: center">Zorbing</h3>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <a href="">
+            <img src="./images/sponsors/2019/Events/Zorbing/IMG-20190114-WA0014.jpg" alt="" id="sponsorlogo">
+          </a>
+          <p><strong>SoBo Belly</strong></p>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- TAB 2 -->
+    <div class="sponsor-content" id="sponsor-tab2">
+
+
+      <div class="co-sponsors">
+        <p>Presented by</p>
+
+        <img id="sponsorlogo" src="images/sponsors/wellness-forever.png" alt="Co-sponsor" />
+      </div>
+      <div class="co-sponsors">
+        <p>Powered by</p>
+        <img id="sponsorlogo" src="images/sponsors/india_today.JPG" alt="Co-sponsor" />
+        <img id="sponsorlogo" src="images/sponsors/Amore Logo.jpg " alt="Industry Partner" />
+      </div>
+      <br><br>
+      <p style="font-size: 1.5rem; font-weight: 600; text-align: center">In Association with</p>
+
+      <div class="sponsors">
+        <img id="sponsorlogo" src="images/sponsors/star-sports.jpg" alt="Eco-system Partner" />
+        <img id="sponsorlogo" src="images/sponsors/cetking.png" alt="Gifting Partner" />
+        <img id="sponsorlogo" src="images/sponsors/mt.jpg" alt="Student Partner" />
+
+        <img id="sponsorlogo" src="images/sponsors/internshala.png" alt="Advertising Partner" />
+        <img id="sponsorlogo" src="images/sponsors/Nerolac.jpg" alt="Voucher Partner" />
+        <img id="sponsorlogo" src="images/sponsors/waghbakri.jpg" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/muskaan.png" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/rio.jpg" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/red-fm.png" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/tcs.png" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/nestle.png" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/beingStudent.png" alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/ttraxx.jpg " alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/frapp.png " alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/good-food-tourism.png " alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/fcb-ulka.png " alt="Industry Partner" />
+        <img id="sponsorlogo" src="images/sponsors/grapevine.png " alt="Industry Partner" />
+      </div>
+    </div>
+  </div>
+
+  <!-- current sponsors -->
+  <!-- <div class="sponsor-content" id="sponsors-2019">
+      <h1>
+        <span
+          style="left: 0vw;
+            position: relative;"
+          >Oculus 2019</span
+        ><span class="brochure"
+          ><a
+            class="effect-shine"
+            target="_blank"
+            href="./Oculus_Marketing_Deck.pdf"
+            download
+            ><i class="fa fa-download"></i>&nbsp;Sponsorship brochure</a
+          ></span
+        >
+      </h1>
+      <h2>Associates</h2>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Associates/British Council/image006.jpg"
+            alt="Associate Partner"
+          />
+          <p>Associate Partner</p>
+        </div>
+      </div>
+      <h2>Partners</h2>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Content Partner/ATKT-mobile.png"
+            alt="Content Partner"
+          />
+          <p>Content Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Magazine Media Partner/ei LOGO 2018.png"
+            alt="Magazine Partner"
+          />
+          <p>Magazine Media Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Newspaper Partner/Maharashtra_Tmes.jpg"
+            alt="Newspaper Partner"
+          />
+          <p>Newspaper Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Online Media Partners/DUExpress_logo.png"
+            alt="Media Partner"
+          />
+
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Online Media Partners/Ignite_Engineers_Logo.png"
+            alt="Media Partner"
+          />
+          <p>Online Media Partners</p>
+        </div>
+        <br />
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Tittle-Tattle Partner/IMG-20181231-WA0001.jpg"
+            alt="Tittle Tattle Partner"
+          />
+          <p>Tittle Tattle Partner</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Vouchers/No escape/IMG-20181229-WA0022.jpg"
+            alt="Voucher Partner"
+          />
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Vouchers/Radhika_s glitter glow salon/IMG-20190106-WA0031.jpg"
+            alt="Voucher Partner"
+          />
+          <p>Voucher Partners</p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Partner Tag/Water Partner/Brijeel/WaterPartner.png"
+            alt="Water Partner"
+          />
+          <p>Water Partner</p>
+        </div>
+      </div>
+
+      <h2>Events Sponsors</h2>
+      <div class="sponsors">
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/images.png"
+            alt="LTI"
+          />
+          <p><strong>LTI</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/sponsor-logo-1.png"
+            alt="XinFin"
+          />
+          <p><strong>XinFin</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/sponsor-logo-2.png"
+            alt="WorkIndia"
+          />
+          <p><strong>WorkIndia</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/sponsor-logo-3.png"
+            alt="Hasura"
+          />
+          <p><strong>Hasura</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/sponsor-logo-4.png"
+            alt="JetBrains"
+          />
+          <p><strong>JetBrains</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Hackathon/sponsor-logo-5.png"
+            alt="HackSociety"
+          />
+          <p><strong>HackSociety</strong></p>
+        </div>
+        <div class="sponsor-wrapper">
+          <img
+            id="sponsorlogo"
+            src="images/sponsors/2019/Events/Sargam/vilberry.jpg"
+            alt="Sargam"
+          />
+          <p><strong>Vilberry</strong></p>
+        </div>
+      </div>
+    </div> -->
+
+  <!-- Past sponsors -->
+  <!-- <div class="sponsor-content" id="sponsors-2018">
+      <h1>
+        <span
+          style="left: 2vw;
+            position: relative;"
+          >Past Partnerships</span
+        >
+      </h1>
+
+      <div class="co-sponsors">
+        <p>Presented by</p>
+
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/wellness-forever.png"
+          alt="Co-sponsor"
+        />
+      </div>
+      <div class="co-sponsors">
+        <p>Co-sponsored by</p>
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/india_today.JPG"
+          alt="Co-sponsor"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/Amore Logo.jpg "
+          alt="Industry Partner"
+        />
+      </div>
+      <div class="sponsors">
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/star-sports.jpg"
+          alt="Eco-system Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/cetking.png"
+          alt="Gifting Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/mt.jpg"
+          alt="Student Partner"
+        />
+
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/internshala.png"
+          alt="Advertising Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/Nerolac.jpg"
+          alt="Voucher Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/waghbakri.jpg"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/muskaan.png"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/rio.jpg"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/red-fm.png"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/tcs.png"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/nestle.png"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/beingStudent.png"
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/ttraxx.jpg "
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/frapp.png "
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/good-food-tourism.png "
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/fcb-ulka.png "
+          alt="Industry Partner"
+        />
+        <img
+          id="sponsorlogo"
+          src="images/sponsors/grapevine.png "
+          alt="Industry Partner"
+        />
+      </div>
+    </div> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.5.0/vanilla-tilt.min.js"></script>
+  <script type="text/javascript" src="./js/app.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>

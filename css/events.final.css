@@ -1,0 +1,374 @@
+/*heading*/
+/* trial change */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: unset;
+}
+
+img {
+    vertical-align: unset;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.heading {
+    width: 20%;
+    /* height: 100%; */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'fourHandTrial';
+    position: fixed;
+    bottom: 0;
+    /* left: 40vw; */
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.63, 0.15, 0.03, 1.12);
+}
+
+.heading p {
+    display: none;
+    align-items: center;
+    justify-content: left;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
+    font-size: 2.2rem;
+    color: rgb(77, 75, 75);
+    background-size: 20px 20px;
+    background-position: 0 0;
+}
+
+.heading img {
+    height: 28px;
+    width: auto;
+    left: 15px;
+}
+
+.card-footer {
+    display: none;
+    background: none;
+}
+
+.transition .card-footer {
+    display: block;
+}
+
+ul.card-stacks {
+    /* width: 660px; */
+    /* top: 60px; */
+    bottom: 20vh;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+    /* height: 250px; */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-family: 'segoe ui';
+    margin-top: 5px;
+}
+
+ul.card-stacks li.card {
+    transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.22);
+    left: 0px;
+    transition-delay: 0.4s;
+    background: #F2F2F2;
+    overflow: hidden;
+    /* height: 270px; */
+    /* width: 200px; */
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    box-shadow: 1px 2px 2px 0 #aaa;
+}
+
+ul.card-stacks li.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul.card-stacks li.card div.content {
+    padding: 5px 10px;
+}
+
+/* problem with overlapping packets */
+
+ul.card-stacks li.card:nth-of-type(1) {
+    /* z-index: 4; */
+    -webkit-transform: rotateZ(-2deg);
+    transform: rotateZ(-2deg);
+}
+
+ul.card-stacks li.card:nth-of-type(2) {
+    /* z-index: 3; */
+    -webkit-transform: rotateZ(-7deg);
+    transform: rotateZ(-7deg);
+}
+
+ul.card-stacks li.card:nth-of-type(3) {
+    /* z-index: 2; */
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+}
+
+ul.card-stacks.transition {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80%;
+    position: static;
+    margin-bottom: 15vh;
+    margin-top: 8vh;
+    width: 80%;
+    left: 7vw;
+    top: 10vh;
+}
+
+ul.card-stacks:not(ul.card-stacks.transition) {
+    position: fixed;
+}
+
+ul.card-stacks.transition li.card {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+    position: initial;
+    margin: 20px 20px;
+}
+
+#modal {
+    z-index: 30;
+}
+
+/* card nav positions */
+
+.literary .card-stacks {
+    left: 75vw;
+}
+
+.fun .card-stacks {
+    left: 55vw;
+}
+
+.cultural .card-stacks {
+    left: 35vw;
+}
+
+.technical .card-stacks {
+    left: 15vw;
+}
+
+.technical.heading {
+    left: 11vw;
+}
+
+.cultural.heading {
+    left: 30vw;
+}
+
+.fun.heading {
+    left: 53.5vw;
+}
+
+.literary.heading {
+    left: 71vw;
+}
+
+ul.card-stacks.transition li.card {
+    width: 200px;
+    height: 250px;
+}
+
+.categoryHeading {
+    display: none;
+}
+
+/* events landing page */
+
+.event-holder {
+    opacity: 0;
+    z-index: -5;
+    height: 0;
+    display: none;
+}
+
+.events-logo {
+    background: white;
+    width: 22vw;
+    position: absolute;
+    height: 22vw;
+    top: calc(50vh - 11vw);
+    left: 39vw;
+    border-radius: 50%;
+    background: url(../images/brain.jpeg), linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.events-landing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    transition: all 0.55s ease-in-out;
+}
+
+.landing-performing {
+    width: 50vw;
+    height: 50%;
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+}
+
+.landing-tech {
+    width: 50vw;
+    height: 50%;
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+}
+
+.landing-literary {
+    width: 50vw;
+    height: 50%;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.landing-fun {
+    width: 50vw;
+    height: 50%;
+    background: linear-gradient(to right, #f093fb, #f5576c);
+}
+
+.slide,
+.slide2,
+.slide3,
+.slide4 {
+    /* z-index: 1; */
+    position: absolute;
+    width: 50%;
+    top: inherit;
+    left: inherit;
+    height: 50%;
+    transition: opacity 1s ease-in-out;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+.slide.show,
+.slide2.show,
+.slide3.show,
+.slide4.show {
+    opacity: 0.25;
+}
+
+.event-category {
+    z-index: 2;
+    position: absolute;
+    margin: 24vh 0 0 20vw;
+    cursor: pointer;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.event-category:hover {
+    background: none;
+    color: white;
+}
+
+.event-category:before,
+.event-category:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: 400ms ease all;
+}
+
+.event-category:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.event-category:hover:before,
+.event-category:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+@media screen and (max-width: 425px) {
+    .event-category {
+        z-index: 2;
+        position: absolute;
+        margin: 24vh 0 0 7vw;
+        cursor: pointer;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: 700;
+        transition: 800ms ease all;
+        outline: none;
+    }
+    ul.card-stacks.transition li.card {
+        width: 76%;
+        margin-left: 12%;
+        height: 250px;
+    }
+    .technical .card-stacks {
+        left: 0;
+    }
+    .cultural .card-stacks {
+        left: 25vw;
+    }
+    .fun .card-stacks {
+        left: 50vw;
+    }
+    ul.card-stacks {
+        top: 77vh;
+    }
+    .moveheading {
+        display: block;
+        color: black;
+        font-weight: normal;
+        width: 100%;
+        margin-top: 20%;
+        margin-bottom: 0%;
+        text-align: center;
+        font-size: 2.2rem;
+        color: rgb(77, 75, 75);
+        background-size: 20px 20px;
+        background-position: 0 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .event-category {
+        font-size: 18px;
+    }
+}

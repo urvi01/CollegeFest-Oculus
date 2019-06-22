@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129763562-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-129763562-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link rel="stylesheet" href="./reveal/css/reveal.css">
+    <link rel="stylesheet" href="./reveal/css/trial.css">
+		<link rel="stylesheet" href="./reveal/lib/css/zenburn.css"> -->
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="css/mainevent.css">
+    <link rel="stylesheet" media="screen" href="css/fullpage.min.css">
+    <link rel="stylesheet" media="screen" href="css/styles.min.css">
+    
+    <link rel="icon" type="icon" href="oculus-favicon.png">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <title>Oculus 2019 | Oculus Sees All</title>
+    <style>
+        @font-face {
+            font-family: 'fourHandTrial';
+            src: url('fourHand_TRIAL.ttf');
+        }
+
+        @font-face {
+            font-family: 'segoe ui';
+            src: url('Segoe UI.ttf');
+        }
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+
+        //Preloader time out
+        $(document).ready(function () {
+
+            $(window).load(function () {
+
+                console.log('loaded');
+                preloaderFadeOutTime = 500;
+
+                function hidePreloader() {
+                    var preloader = $('.spinner-wrapper');
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }
+
+                hidePreloader();
+
+                console.log('hidden');
+            });
+        });
+
+
+        //fade navbar on reaching footer
+        var footer_height;
+        $(document).ready(function () {
+            footer_height = $("footer").offset().top;
+            console.log("footer height is " + footer_height);
+
+        });
+
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+
+            if (document.body.scrollTop > (footer_height - 100) || document.documentElement.scrollTop > (footer_height -
+                100)) {
+                // console.log("hide");
+                $('#navbar').addClass("disp");
+            } else {
+                // console.log("unhide");
+                $('#navbar').removeClass("disp");
+
+            }
+        }
+
+    </script>
+    <div class="spinner-wrapper">
+        <div class="spinner">
+            <img id="preload-img1" src="./images/outer.png">
+            <img id="preload-img2" src="./images/inner.png">
+        </div>
+    </div>
+
+
+    <!-- common navbar elements -->
+
+    <div id="videoOverlay" class="video-overlay">
+
+        <iframe id="after-movie" width="80%" height="70%" style="margin-top: 15vh" src="https://www.youtube.com/embed/VlyZrYF5Emk"
+            frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="close"><i onclick="hideOverlay()" class="fa fa-close"></i></div>
+    </div>
+
+
+    <div id="navbar">
+        <img style="width: 80px;
+        position: absolute;
+        left: 2vw;
+        top: 1.5vh;" src="logotext.png">
+
+        <div class="swing">
+            <div class="hover" onclick="showOverlay()">
+                <div class="thread"></div>
+                <div class="handle"></div>
+            </div>
+        </div>
+
+        <div id="nav">
+            <div><a href="sponsors.html">Sponsors</a></div>
+            <div style="background-color: inherit; border-radius: 50%;"><a href="index.html"><img src="oculus-favicon.png"></a></div>
+            <div><a href="events.final.html">Events</a></div>
+        </div>
+
+        <div class="register"> Coming Soon!</div>
+
+    </div>
+
+
+    <!-- <div class="menu-button"><i class="fa fa-share-alt"></i>
+        <a target="_blank" href="https://mobile.twitter.com/OculusSeesAll"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/oculusseesall"><i class="fa fa-linkedin"></i></a>
+        <a target="_blank" href="https://facebook.com/OculusSeesAll"><i class="fa fa-facebook"></i> </a>
+        <a target="_blank" href="https://www.instagram.com/oculus2k19/"><i class="fa fa-instagram"></i> </a>
+    </div> -->
+
+    <div class="icon-bar">
+        <a target="_blank" href="https://facebook.com/OculusSeesAll" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://mobile.twitter.com/OculusSeesAll" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/oculus2k19/" class="google"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/oculusseesall" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCm5gXAKIwUQTuGngoGlM4pg" class="youtube"><i class="fa fa-youtube"></i></a>
+    </div>
+
+
+    <!-- end of common navbar elements -->
+
+    <!-- scroll to top button -->
+    <!-- <i class="fa fa-angle-up" id="scrollUp" onclick="topFunction()"></i> -->
+
+    <div id="fullpage">
+        <div class="section" id="particles-js">
+
+            <div class="clock">
+                <div class="holder">
+                    <span> Days</span>
+                    <div class="time-card">
+                        <div class="digit tenday">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+                        <div class="digit day">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="holder">
+                    <span>Hours</span>
+                    <div class="time-card">
+                        <div class="digit tenhour">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+
+                        <div class="digit hour">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="holder">
+                    <span>Minutes</span>
+                    <div class="time-card">
+                        <div class="digit tenmin">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+
+                        <div class="digit min">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="holder">
+                    <span>Seconds</span>
+                    <div class="time-card">
+                        <div class="digit tensec">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+
+                        <div class="digit sec">
+                            <span class="base"></span>
+                            <div class="flap over front"></div>
+                            <div class="flap over back"></div>
+                            <div class="flap under"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-oculus">
+                <a href="#"><img src="oculus.png"></a>
+                <p class="about-oculus-para">
+                    Sardar Patel Institute of Technology presents to you Oculus 2019.
+                    <span class="about-oculus-hide-mobile"> Oculus is a Techno-Cultural festival that represents the synergy
+                        between Culture and Technology.</span>
+                    Be it performing arts, or hackathons. Writing poetry or Technical Papers, Oculus sees all.
+                </p>
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="section">
+                <!-- <div class="theme-font-montserrat theme-color-white-blue" style="width: 100%; height: 100%;">
+                        <div class="reveal">
+                            <div class="slides">
+                                <section>
+                                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 238px; height: auto;">
+                                        <div class="sl-block-content" style="z-index: 10;" data-has-custom-html="">
+                                            <h1>
+                                                <span style="color:rgb(34, 34, 34); font-size:small; text-align:start">The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January 1 of 2000, an era ended and another began.</span>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;">
+                                        <div class="sl-block-content" style="z-index: 10;">
+                                            <h1>Title Text</h1>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section data-background-color="#666666">
+                                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;">
+                                        <div class="sl-block-content" style="z-index: 10;">
+                                            <h2>Title Text</h2>
+                                        </div>
+                                    </div>
+                                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 263px; height: auto;">
+                                        <div class="sl-block-content" style="z-index: 11;">
+                                            <ul>
+                                                <li>Bullet One</li>
+                                                <li>Bullet Two</li>
+                                                <li>Bullet Three</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div> -->
+                <iframe id="reveal" src="https://slides.com/urvi01/deck/embed" width="100%" height="100%" scrolling="no" frameborder="0" ></iframe>
+                <div style="position: absolute;width: 100%;height: 55px;left: 0;bottom: 0;background:white;"></div>
+        </div>
+        
+        <div class="section" id="section2">
+            <!-- <div class="heading">
+                <h1>GENERATION Z</h1>
+                <h2>IT'S ALL BALANCED</h2>
+            </div> -->
+            <!-- <br><br> -->
+            <div class="genz-container">
+                <img class="hiddenmobile" style="width: 35%; height: 40%" src="images/brain-opt.png">
+
+                <div class="contentgenz">
+
+                    The transition from the 20th century into the 21st was a momentous point in history. As December 31 of 1999 bled into January
+                    1 of 2000, an era ended and another began. And unlike the millennials, who got to see the change with
+                    their young eyes, we were born into the change. We are Generation Z, and we are as old as this new century
+                    is.
+                    <span class="hiddenmobile">
+                        We have seen everything change and been a part of the change - we have used both flip phones and smart phones, connected
+                        to the Internet using both dial-ups and WiFi, played both 8-bit games and The Last of Us. We went
+                        from playing songs on cassettes to Spotify, from watching movies on cable to Netflix. We have been
+                        a part of a transitioning world. And it's not just self-reinvention that we've done smoothly - we
+                        have made the change around us better.
+                    </span> We are the youngest minds in research, the youngest CEOs and entrepreneurs finding their footing
+                    in the world. SPIT found this generation a fitting encapsulation of Oculus 2k19, and is proud to announce
+                    the theme for the same - Generation Z. We believe it represents everything Oculus strives and stands
+                    for - change, flexibility, modernism and fun. Oculus 2k19 will hopefully be the perfect generational
+                    paradigm.
+                </div>
+            </div>
+
+        </div>
+
+        <div style="font-family: cursive;padding:0px;padding-top:0px;padding-bottom:0px;height:100vh;" class="section" id="section3">
+            <section class="strips">
+                <article class="strips__strip">
+                  <div class="strip__content" >
+                    <img class="hiddenmobile strip__title " style="position:absolute;mix-blend-mode:luminosity;bottom:0;" src="./images/technical.png">
+                    <h1 class="strip__title"  data-name="Lorem">Technical</h1>
+                    <div class="strip__inner-text">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-5">
+                                    <img class="eventimg" src="./images/technical.png" style="width:100%;height:100%;">
+                            </div>
+                            <div class="col-sm-9 col-md-7">
+                                <div class="hidden-xs" style="padding-top:20%"></div>
+                                    No problem can be solved from the same level of consciousness that created it.
+                                    <br/>Technical Events provide a platform where participants can implement their astounding coding and technical skills. 
+                                    <br/><br/>
+                                    <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </article>
+                <article class="strips__strip">
+                  <div class="strip__content">
+                    <img class="hiddenmobile strip__title " style="width:auto;height:80%;position:absolute;mix-blend-mode:luminosity;bottom:0;" src="./images/literary.png">
+                    <h1 class="strip__title" data-name="Ipsum">Literary</h1>
+                    <div class="strip__inner-text">
+                            <div class="row">
+                                    <div class="col-sm-3 col-md-5">
+                                            <img class="eventimg" src="./images/literary.png"  style="height:400px;"> 
+                                    </div>
+                                    <div class="col-sm-9 col-md-7">
+                                        <div class="hidden-xs" style="padding-top:20%"></div>
+                                            Pen is mightier than sword. 
+                                            <br/>Oculus presents Literary Events which presents a golden opportunity to everyone to showcase their flair in content writing skills.
+                                            <br/><br/>
+                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                    </div>
+                            </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="strips__strip">
+                  <div class="strip__content">
+                    <img class="hiddenmobile strip__title " style="position:absolute;mix-blend-mode:luminosity;bottom:0;" src="./images/cultural.png">
+                    <h1 class="strip__title" data-name="Dolor">Performing</h1>
+                    <div class="strip__inner-text">
+                            <div class="row">
+                                    <div class="col-sm-3 col-md-5">
+                                            <img class="eventimg" src="./images/cultural.png"  style="width:90%;height:90%;">
+                                    </div>
+                                    <div class="col-sm-9 col-md-7">
+                                        <div class="hidden-xs" style="padding-top:20%"></div>
+                                            Culture makes people understand each other better and collectively helps them evolve.
+                                            <br/>Performing Arts are the perfect chance for participants to present and witness their singing, dancing and other vivid varities of cultural activities.
+                                            <br/><br/>
+                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                    </div>
+                            </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="strips__strip">
+                  <div class="strip__content">
+                    <img class="hiddenmobile strip__title " style="position:absolute;mix-blend-mode:luminosity;bottom:0;" src="./images/fun.png">
+                    <h1 class="strip__title" data-name="Sit">Fun</h1>
+                    <div class="strip__inner-text">
+                            <div class="row">
+                                    <div class="col-sm-3 col-md-5">
+                                            <img class="eventimg" src="./images/fun.png"  style="width:100%;height:100%;">
+                                    </div>
+                                    <div class="col-sm-9 col-md-7">
+                                        <div class="hidden-xs" style="padding-top:20%"></div>
+                                            All work and no play makes jack a dull boy. 
+                                            <br/>Presenting to you Fun Events where participants can enjoy the time of their lives.
+                                            <br/><br/>
+                                            <a href="./events.final.html" style="font-size:20px;color:black;">Checkout the events</a>
+                                    </div>
+                            </div>
+                    </div>
+                  </div>
+                </article>
+
+                <i class="fa fa-close strip__close"></i>
+              </section>
+        </div>
+
+        <div class="section" id="section4">
+            <span class="hiddenmobile"><br/></span><br>
+            <div class="ngoheading">
+                <h1>OCULUS FOR A CAUSE</h1>
+            </div>
+            <div style="display: inline-flex; justify-content: space-evenly">
+                <div class="ngo-content">
+                    <p>
+                        We at SPIT believe that students cannot be called engineers with just their degrees. What makes us engineers is a holistic
+                        development of our perspectives and being equipped to solve problems, not just on circuits or computers,
+                        but also in the world around us. Oculus 2019 is proud to be associated with Ratna Nidhi Charitable
+                        Trust and be a part of its efforts to attain its noble goal. As part of our collaboration with the
+                        organization, the students of SPIT will be organising a drive for donating spectacles and clothes
+                        for BMC drainage cleaners and people living in rural Maharashtra. To help educate children with lesser
+                        privileges and facilities, we will help the Trust in sending books and resources to such kids and
+                        to municipal schools. We will also be raising funds in the fest to pay for prosthetic limbs for the
+                        victims of terror attacks and other unforeseen accidents.
+                        <br><br>Oculus 2019 wishes to continue it's association with this cause and contribute to the Trust's
+                        humanitarian efforts.<br><br>
+                    </p>
+                </div>
+                <a href="https://ratnanidhi.org/" class="hiddenmobile" target="_blank"><img style="width: 400px;
+                height: 400px;
+                border-radius: 50%;
+                opacity: 0.7;
+                mix-blend-mode: luminosity;" src="images/ngo.jpeg"></a>
+            </div>
+            <span class="hiddenmobile"><br/><br/></span>
+            <br>
+
+        </div>
+
+
+
+        <div class="section" id="section10">
+            <footer>
+                <center><img style="width: 200px; " src="logotext.png"></center>
+                <h2 style="text-align: center;margin-top: 5vh">LINKS</h2>
+                <div style="display: flex; justify-content: space-evenly;">
+                    <div class="links">
+                        <p><a class="effect-shine" href="#particles-js">HOME</a></p>
+                        <p><a class="effect-shine" href="#section3">EVENTS</a></p>
+                        <!-- <p><a class="effect-shine" href="#">SCHEDULE</a></p> -->
+                        <p><a class="effect-shine" href="#section4">SOCIAL CAUSE</a></p>
+                    </div>
+                    <div class="links">
+                        <p><a class="effect-shine" style="cursor: pointer" onclick="showOverlay()">AFTERMOVIE</a></p>
+                        <p><a class="effect-shine" href="#">TEAM</a></p>
+                        <p><a class="effect-shine" href="#">REGISTER</a></p>
+                        <!-- <p><a class="effect-shine" href="#">PRIVACY POLICY</a></p> -->
+                    </div>
+
+                </div>
+
+
+                <h2 style="text-align: center">CONTACT</h2>
+
+                <div class="contact">
+                    <div class="contact-details">
+                        <center>
+                            <strong>
+                                <p>ADDRESS</p>
+                            </strong>
+
+                            <p>Bharatiya Vidya Bhavans Sardar Patel Institute of Technology, Bhavans Campus, Munshi Nagar,
+                                Andheri (West), Mumbai, Maharashtra 400058</p>
+
+                            <p><strong>Email:</strong>
+                                <a href="mailto:oculus_thefest@spit.ac.in">oculus_thefest@spit.ac.in</a></p>
+                        </center>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1012.9718675897255!2d72.83564226591032!3d19.123355949795293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x16268e5d6bca2e6a!2sSardar+Patel+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1503820125526"
+                            width="100%" height="200px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <!-- scripts -->
+    <script type="text/javascript" src="js/fullpage.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/particles.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/mainevent.js"></script>
+<!-- 
+    <script src="./reveal/lib/js/head.min.js"></script>
+    <script src="./reveal/js/reveal.js"></script>
+     
+    <script>
+    // Required, even if empty.
+    Reveal.initialize({
+        width: 960,
+height: 700,
+transition: "slide",
+backgroundTransition: "slide",
+center: false
+    });
+    </script> -->
+
+    <script>
+        var myFullpage = new fullpage('#fullpage', {
+            //Navigation
+            menu: '#menu',
+            lockAnchors: false,
+            anchors: ['Home', 'About', 'Events', 'Social_Cause', 'Contact'],
+            navigation: false,
+            navigationPosition: 'right',
+            navigationTooltips: ['firstSlide', 'secondSlide'],
+            showActiveTooltip: false,
+            slidesNavigation: false,
+            slidesNavPosition: 'bottom',
+
+            //Scrolling
+            css3: true,
+            scrollingSpeed: 700,
+            autoScrolling: true,
+            fitToSection: true,
+            fitToSectionDelay: 1000,
+            scrollBar: true,
+            easing: 'easeInOutCubic',
+            easingcss3: 'ease',
+            loopBottom: false,
+            loopTop: false,
+            loopHorizontal: true,
+            continuousVertical: false,
+            continuousHorizontal: false,
+            scrollHorizontally: false,
+            interlockedSlides: false,
+            dragAndMove: false,
+            offsetSections: false,
+            resetSliders: false,
+            fadingEffect: false,
+            normalScrollElements: '#element1, .element2',
+            scrollOverflow: false,
+            scrollOverflowReset: false,
+            scrollOverflowOptions: null,
+            touchSensitivity: 15,
+            normalScrollElementTouchThreshold: 5,
+            bigSectionsDestination: null,
+
+            //Accessibility
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: true,
+
+            //Design
+            controlArrows: true,
+            verticalCentered: true,
+            sectionsColor: ['#ccc', '#fff'],
+            paddingTop: '3em',
+            paddingBottom: '10px',
+            fixedElements: '#header, .footer',
+            responsiveWidth: 0,
+            responsiveHeight: 0,
+            responsiveSlides: false,
+            parallax: false,
+            parallaxOptions: {
+                type: 'reveal',
+                percentage: 62,
+                property: 'translate'
+            },
+
+            //Custom selectors
+            sectionSelector: '.section',
+            slideSelector: '.slide',
+
+            lazyLoading: true,
+
+            //events
+            onLeave: function (origin, destination, direction) { },
+            afterLoad: function (origin, destination, direction) { },
+            afterRender: function () { },
+            afterResize: function (width, height) { },
+            afterResponsive: function (isResponsive) { },
+            afterSlideLoad: function (section, origin, destination, direction) { },
+            onSlideLeave: function (section, origin, destination, direction) { }
+        });
+    </script>
+</body>
+
+</html>
